@@ -1,5 +1,5 @@
 ## My st build
-#Patches applied
+# Patches applied
 - [st-alpha](https://st.suckless.org/patches/alpha/)
 - [st-anysize](https://st.suckless.org/patches/anysize/)
 - [st-clipboard](https://st.suckless.org/patches/clipboard/)
