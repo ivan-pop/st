@@ -179,6 +179,8 @@ static MouseShortcut mshortcuts[] = {
 #define MODKEY Mod1Mask
 #define TERMMOD (ControlMask|ShiftMask)
 
+static char *editorpipecmd[] = { "/bin/sh", "-c", "editor-pipe", "externalpipe", NULL };
+
 static Shortcut shortcuts[] = {
   /* mask                 keysym          function        argument */
   { XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
@@ -193,6 +195,8 @@ static Shortcut shortcuts[] = {
   { TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
   { ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
   { TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+  /* External pipe commands */
+  { MODKEY,               XK_e,           externalpipe,   { .v = editorpipecmd } },
   /* Scrolling keys */
   { ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
   { ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
