@@ -192,11 +192,8 @@ static Shortcut shortcuts[] = {
   { TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
   { TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
   { TERMMOD,              XK_V,           clippaste,      {.i =  0} },
-  { TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
-  { ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
+  { ShiftMask,            XK_Insert,      clippaste,      {.i =  0} },
   { TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-  /* External pipe commands */
-  { MODKEY,               XK_e,           externalpipe,   { .v = editorpipecmd } },
   /* Scrolling keys */
   { ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
   { ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
