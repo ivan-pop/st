@@ -94,24 +94,29 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
+/* Colors were takes from modus-themes Emacs theme */
 static const char *colorname[] = {
-  /* solarized dark */
-  "#073642",  /*  0: black    */
-  "#dc322f",  /*  1: red      */
-  "#859900",  /*  2: green    */
-  "#b58900",  /*  3: yellow   */
-  "#268bd2",  /*  4: blue     */
-  "#d33682",  /*  5: magenta  */
-  "#2aa198",  /*  6: cyan     */
-  "#eee8d5",  /*  7: white    */
-  "#002b36",  /*  8: brblack  */
-  "#cb4b16",  /*  9: brred    */
-  "#586e75",  /* 10: brgreen  */
-  "#657b83",  /* 11: bryellow */
-  "#839496",  /* 12: brblue   */
-  "#6c71c4",  /* 13: brmagenta*/
-  "#93a1a1",  /* 14: brcyan   */
-  "#fdf6e3",  /* 15: brwhite  */
+  /* 8 normal colors */
+  "black",
+  "#ff8059", // red
+  "#44bc44", // green
+  "#d0bc00", // yellow
+  "#2fafff", // blue
+  "#feacd0", // magenta
+  "#00d3d0", // cyan
+  "white",
+
+  /* 8 bright colors */
+  "black",
+  "#ef8b50", // red-alt
+  "#70b900", // green-alt
+  "#c0c530", // yellow-alt
+  "#79a8ff", // blue-alt
+  "#b6a0ff", // magenta-alt-other
+  "#6ae4b9", // cyan-alt-other
+  "white",
+
+  [255] = 0,
 };
 
 
@@ -119,10 +124,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 12;
-unsigned int defaultbg = 8;
-static unsigned int defaultcs = 14;
-static unsigned int defaultrcs = 15;
+unsigned int defaultfg = 7;
+unsigned int defaultbg = 0;
+unsigned int defaultcs = 7;
+static unsigned int defaultrcs = 7;
 
 /*
  * Default shape of cursor
